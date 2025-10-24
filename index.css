@@ -1,0 +1,31 @@
+body {
+    background: linear-gradient(160deg, #0f0f0f, #1a1a2e, #16213e);
+
+}
+
+nav {
+    background-color: black;
+    width: 50%;
+    margin: 25px auto;
+    border-radius: 30px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-size: xx-large;
+    transition: transform 1s ease, color 1s ease, background-color 1s ease;
+}
+
+nav a:hover {
+    color: red;
+    transform: scale(1.25);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
