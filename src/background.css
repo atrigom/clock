@@ -1,0 +1,28 @@
+:root {
+    --bg: white;
+    --text: black;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #1a1a1a;
+        --text: white;
+    }
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: all 0.3s ease;
+    margin: 0;
+    padding: 2rem;
+}
+
+nav {
+    background-color: var(--text);
+    
+}
+
+nav a{
+   color: var(--bg);
+}
