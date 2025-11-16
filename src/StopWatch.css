@@ -1,0 +1,40 @@
+.start, .pause, .restart {
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: var(--bg-btn, #ccc);
+}
+
+x-stopwatch[start-time]:not([paused]):not([reset]) .pause {
+    background-color: red;
+}
+
+x-stopwatch[paused] .start {
+    background-color: green;
+}
+
+x-stopwatch[paused] .pause {
+    background-color: var(--bg-btn, #ccc);
+}
+
+x-stopwatch[reset] .start,
+x-stopwatch[reset] .pause {
+    background-color: var(--bg-btn, #ccc);
+}
+
+.restart:active ~ .start,
+.restart:active ~ .pause {
+    background-color: var(--bg-btn, #ccc);
+}
+
+.activado {
+    box-shadow: none;
+    background-color: var(--fondoclicado, #888) !important;
+}
+
+#stopwatch time{
+    font-size: 100px;
+    padding-bottom: 100px;
+}

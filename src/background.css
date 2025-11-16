@@ -1,4 +1,3 @@
-/* VARIABLES MODO CLARO */
 :root {
     --bg: linear-gradient(160deg, #f4f4f7, #e5e5ec, #dcdce3);
     --text: #1c1c1e;
@@ -6,7 +5,10 @@
     --nav-text: #1c1c1e;
 }
 
-/* VARIABLES MODO OSCURO */
+#clock {
+    text-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: linear-gradient(160deg, #0c0c0c, #13131f, #0f1629);
@@ -14,37 +16,18 @@
         --nav-bg: rgba(20, 20, 20, 0.85);
         --nav-text: #f2f2f7;
     }
-}
-
-/* BODY usa las variables (no repetimos estilos para evitar conflicto) */
-
-/* NAV usando variables del tema */
-nav {
-    background-color: var(--nav-bg);
-}
-
-/* LINKS */
-nav a {
-    color: var(--nav-text);
-}
-
-/* CLOCK – sombras según modo del sistema */
-#clock {
-    font-size: 10vw;
-    letter-spacing: 0.05em;
-    font-weight: bold;
-}
-
-/* MODO OSCURO */
-@media (prefers-color-scheme: dark) {
     #clock {
         text-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
     }
 }
-
-/* MODO CLARO */
-@media (prefers-color-scheme: light) {
-    #clock {
-        text-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
-    }
+nav {
+    background-color: var(--nav-bg);
+}
+nav a {
+    color: var(--nav-text);
+}
+#clock {
+    font-size: 10vw;
+    letter-spacing: 0.05em;
+    font-weight: bold;
 }
