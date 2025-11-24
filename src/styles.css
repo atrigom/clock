@@ -148,11 +148,20 @@ x-timer[reset] .pause {
     background-color: var(--bg-btn, #ccc);
 }
 
+x-timer[loop] .loop {
+    background-color: #033264;
+    color: white;
+}
+
+x-timer:not([loop]) .no-loop {
+    background-color: #033264;
+    color: white;
+}
+
 .timers{
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 .current-interval{
@@ -163,6 +172,7 @@ input[type="time"] {
   background: var(--bg);
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
   padding: 10px;
+  margin: 10px;
   border-radius: 20px;
   border: none;
   outline: none;
