@@ -14,6 +14,26 @@ input[type="time"] {
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
 }
 
+#alarm x-alarm .items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* máximo 4 columnas */
+  gap: 12px;  /* espacio entre alarmas */
+  padding: 8px;
+}
+
+#alarm x-alarm .items > .alarms {
+  display: flex;          /* cada alarma sigue siendo row */
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: linear-gradient(160deg, #0c0c0c, #13131f, #0f1629);
